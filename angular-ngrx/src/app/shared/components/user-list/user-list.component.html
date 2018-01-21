@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-10">
+        <table *ngIf="users; else loading" class="table table-striped">
+            <thead>
+                <tr>
+                    <th><p> Name </p></th>
+                    <th><p> Surname</p></th>
+                    <th><p> BirthDate</p></th>
+                    <th><p> Street</p></th>
+                    <th><p> City</p></th>
+                    <th><p> Phone</p></th>
+                    <th><p> Number</p></th>
+                    <th></th>
+                    <th align="right">
+                        <p>Action</p>
+                    </th>
+                </tr>
+            </thead>
+
+            <tr *ngFor="let user of users">
+                <td ><a [routerLink]="['detail',user.id]">{{user.name}}</a></td>
+                <td>{{user.surname}}</td>
+                <td class="col-sm-1">{{user.birthDate}}</td>
+                <td>{{user.street}}</td>
+                <td>{{user.city}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.number}}</td>
+                <td class="col-sm-1">
+                </td>
+                <td align="right" class="col-sm-1">
+                    <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<ng-template #loading>
+    <span>loading users...</span>
+</ng-template>

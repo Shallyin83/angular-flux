@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-sm-12">
+    <form (submit)="submitUser()"  class="form" [formGroup]="form">
+        <div class="form-group">
+            <label for="name-input">Name:</label>
+            <input type="text" placeholder="Name" [(ngModel)]="user.name"  class="form-control" formControlName="name"/>
+        </div>
+        <div class="form-group">
+            <label for="name-input">Surname:</label>
+        <input type="text" placeholder="Surname" [(ngModel)]="user.surname"  class="form-control" formControlName="surname"/>
+        </div>
+        <div class="form-group">
+            <label for="name-input">Date of Birth:</label>
+        <input type="text" placeholder="Date of Birth" [(ngModel)]="user.birthDate" class="form-control" formControlName="birthDate" />
+        </div>
+        <div class="form-group">
+            <label for="name-input">Street:</label>
+        <input type="text" placeholder="Street" [(ngModel)]="user.street" class="form-control" formControlName="street" />
+        </div>
+        <div class="form-group">
+            <label for="name-input">City:</label>
+        <input type="text" placeholder="City" [(ngModel)]="user.city" class="form-control" formControlName="city" />
+        </div>
+        <div class="form-group">
+            <label for="name-input">Phone:</label>
+        <input type="tel" placeholder="Phone" [(ngModel)]="user.phone" class="form-control" formControlName="phone" />
+        </div>
+        <div class="form-group">
+            <label for="name-input">Number:</label>
+        <input type="text" placeholder="Number" [(ngModel)]="user.number" class="form-control" formControlName="number" />
+        </div>
+       
+        <!-- <textarea style="width:100%" placeholder="Title" [(ngModel)]="user.title" name="user"></textarea> -->
+        <!-- <button [disabled]="filter==='All'" class="btn btn-primary" (click)="addUser()">Add User</button> -->
+        <div class="form-group">
+            <button
+                    type="submit"
+                    [disabled]="!form.valid"
+                    class="btn btn-primary ">
+                Submit
+            </button>
+            <a [routerLink]="['/users']" class="btn btn-primary">Back to Listing</a>            
+        </div>
+    </form>
+    </div>
+</div>

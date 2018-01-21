@@ -1,0 +1,4 @@
+<user-detail-container
+        [user]="users$ | async"
+        (deleteUserEvent)="deleteUser($event)"
+></user-detail-container>

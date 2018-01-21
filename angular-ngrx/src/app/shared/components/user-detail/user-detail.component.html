@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-sm-10">
+        
+
+    <div  *ngIf="user">
+
+        <div class="card">
+          <div class="card-header">
+              <div class="row">
+                <div class="col-sm-6">User Detail</div> 
+                <div class="col-sm-6 text-right"><a [routerLink]="['/users']" class="btn btn-primary">Back to Listing</a></div>
+              </div>
+          </div>
+          <div class="card-body">
+            <p>Name: <span class="badge badge-primary">{{user.name}}</span></p>
+            <p>Surname:  <span class="badge badge-primary">{{user.surname}}</span></p>
+            <p>Birth Date:  <span class="badge badge-primary">{{user.birthDate}}</span></p>
+            <p>Phone:  <span class="badge badge-primary">{{user.phone}}</span></p>
+            <p>City:  <span class="badge badge-primary">{{user.city}}</span></p>
+            <p>Street:  <span class="badge badge-primary">{{user.street}}</span></p>
+            <p>Number:  <span class="badge badge-primary">{{user.number}}</span></p>
+          </div>
+          <div class="card-footer text-muted">
+            <span class="float-md-right ">
+              <button (click)="editUser(user)" class="btn btn-sm btn-outline-warning"> EDIT</button>
+              <button (click)="deleteUser(user)"  class="btn btn-sm btn-outline-danger"> DELETE</button>
+            </span>
+      
+          </div>
+        </div>
+      
+      </div>
+      
+      
+    </div>
+</div>

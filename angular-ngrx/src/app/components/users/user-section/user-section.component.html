@@ -1,0 +1,7 @@
+<h1> User list</h1>
+<user-list (deleteUserEvent)="deleteUser($event)" [users]="users$ | async"></user-list>
+<div class="row">
+    <div class="col-sm-10 text-right">
+        <a [routerLink]="['new']" class="btn btn-primary">Add User</a>
+    </div>
+</div>
