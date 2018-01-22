@@ -38,4 +38,10 @@ export class UserEffects {
         .map(action => action.payload)
         .switchMap(user => this.userService.deleteUser(user))
         .map(user => this.userActions.deleteUserSuccess(user));
+
+    @Effect() updateUser$ = this.actions$
+        .ofType('UPDATE_USER')
+        .map(action => action.payload)
+        .switchMap(user => this.userService.updateUser(user))
+        .map(user => this.userActions.updateUserSuccess(user));
 }

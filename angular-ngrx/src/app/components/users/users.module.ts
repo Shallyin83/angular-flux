@@ -4,6 +4,7 @@ import { SharedModule } from 'app/shared/shared.module';
 import { UserSectionComponent } from './user-section/user-section.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 import { UsersComponent } from './users.component';
 import { UsersRoutes } from './users.routes';
 
@@ -18,7 +19,8 @@ import { UsersRoutes } from './users.routes';
         UsersComponent,
         UserSectionComponent,
         UserDetailComponent,
-        AddUserComponent
+        AddUserComponent,
+        EditUserComponent
     ],
 })
 export class UsersModule { }

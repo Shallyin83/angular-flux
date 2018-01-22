@@ -32,5 +32,10 @@ export class UserService {
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
+  updateUser(user: User): Observable<Object> {
+    return this.http.put(this._baseUrl + 'users' + '/' + user.id, user)
+      .map((res) => user)
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
 
 }

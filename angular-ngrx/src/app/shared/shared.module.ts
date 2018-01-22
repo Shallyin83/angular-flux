@@ -6,7 +6,7 @@ import { UserService } from './services/user.service';
 import { UserActions } from "app/actions/userAction";
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserDetailContainerComponent } from './components/user-detail/user-detail.component';
-import { AddUserContainerComponent } from './components/add-user/add-user.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
 
 @NgModule({
     imports: [
@@ -18,12 +18,12 @@ import { AddUserContainerComponent } from './components/add-user/add-user.compon
     declarations: [
         UserListComponent,
         UserDetailContainerComponent,
-        AddUserContainerComponent
+        UserFormComponent
     ],
     exports: [
         UserListComponent,
         UserDetailContainerComponent,
-        AddUserContainerComponent,
+        UserFormComponent,
         RouterModule
     ],
       providers: [UserActions, UserService],

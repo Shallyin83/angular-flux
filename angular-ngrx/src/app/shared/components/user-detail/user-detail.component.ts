@@ -20,7 +20,7 @@ export class UserDetailContainerComponent implements OnInit {
   }
 
   editUser(user) {
-    this.router.navigate(['/users/new',user.id]);
+    this.router.navigate(['/users/edit',user.id]);
   }
 
   deleteUser(user) {

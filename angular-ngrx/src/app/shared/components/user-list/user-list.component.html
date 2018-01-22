@@ -11,14 +11,14 @@
                     <th><p> Phone</p></th>
                     <th><p> Number</p></th>
                     <th></th>
-                    <th align="right">
+                    <th align="right" colspan="3" class="text-center">
                         <p>Action</p>
                     </th>
                 </tr>
             </thead>
 
             <tr *ngFor="let user of users">
-                <td ><a [routerLink]="['detail',user.id]">{{user.name}}</a></td>
+                <td >{{user.name}}</td>
                 <td>{{user.surname}}</td>
                 <td class="col-sm-1">{{user.birthDate}}</td>
                 <td>{{user.street}}</td>
@@ -28,7 +28,13 @@
                 <td class="col-sm-1">
                 </td>
                 <td align="right" class="col-sm-1">
-                    <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+                    <a class="btn btn-sm btn-primary" [routerLink]="['detail',user.id]">Detail</a>
+                </td>
+                <td align="right" class="col-sm-1">    
+                    <a class="btn btn-sm btn-warning" [routerLink]="['edit',user.id]">Edit</a>
+                </td>
+                <td align="right" class="col-sm-1">   
+                    <button class="btn btn-sm btn-danger" (click)="deleteUser(user)">Delete</button>
                 </td>
             </tr>
         </table>

@@ -2,25 +2,32 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { User } from "app/shared/model/user";
 
-@Component({
-  selector: 'add-user-container',
-  templateUrl: './add-user.component.html',
-  styleUrls: ['./add-user.component.css']
-})
-export class AddUserContainerComponent implements OnInit {
 
+@Component({
+  selector: 'user-form',
+  templateUrl: './user-form.component.html',
+  styleUrls: ['./user-form.component.css']
+})
+export class UserFormComponent implements OnInit {
+
+  @Input() user: User = new User();
+  // @Input() user: User = {
+  //   name: '',
+  //   surname: '',
+  //   birthDate: '',
+  //   street: '',
+  //   city: '',
+  //   phone: '',
+  //   number: ''
+  // };
   @Output()
   addUserEvent = new EventEmitter();
 
-  // @Input()
-  // filter;
-
   form: FormGroup;
 
-  user: User = new User();
+  //user: User = new User();
   constructor(public formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      'id': [this.user.id],
       'name': [this.user.name, Validators.required],
       'surname': [this.user.surname, Validators.required],
       'birthDate': [this.user.birthDate, Validators.required],

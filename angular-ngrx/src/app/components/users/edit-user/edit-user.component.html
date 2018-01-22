@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-header">
+        Edit User
+    </div>
+    <div class="card-body">
+        <user-form [user]="user$ | async" (addUserEvent)="updateUser($event)"></user-form>
+    </div>
+</div>

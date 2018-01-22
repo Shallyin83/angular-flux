@@ -12,18 +12,18 @@
               </div>
           </div>
           <div class="card-body">
-            <p>Name: <span class="badge badge-primary">{{user.name}}</span></p>
-            <p>Surname:  <span class="badge badge-primary">{{user.surname}}</span></p>
-            <p>Birth Date:  <span class="badge badge-primary">{{user.birthDate}}</span></p>
-            <p>Phone:  <span class="badge badge-primary">{{user.phone}}</span></p>
-            <p>City:  <span class="badge badge-primary">{{user.city}}</span></p>
-            <p>Street:  <span class="badge badge-primary">{{user.street}}</span></p>
-            <p>Number:  <span class="badge badge-primary">{{user.number}}</span></p>
+            <p>Name: {{user.name}}</p>
+            <p>Surname:  {{user.surname}}</p>
+            <p>Birth Date:  {{user.birthDate}}</p>
+            <p>Phone:  {{user.phone}}</p>
+            <p>City:  {{user.city}}</p>
+            <p>Street:  {{user.street}}</p>
+            <p>Number:  {{user.number}}</p>
           </div>
           <div class="card-footer text-muted">
             <span class="float-md-right ">
-              <button (click)="editUser(user)" class="btn btn-sm btn-outline-warning"> EDIT</button>
-              <button (click)="deleteUser(user)"  class="btn btn-sm btn-outline-danger"> DELETE</button>
+              <button (click)="editUser(user)" class="btn btn-sm btn-warning"> EDIT</button>
+              <button (click)="deleteUser(user)"  class="btn btn-sm btn-danger"> DELETE</button>
             </span>
       
           </div>

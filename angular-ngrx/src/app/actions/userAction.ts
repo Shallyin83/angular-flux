@@ -32,4 +32,11 @@ export class UserActions {
         };
     }
 
+    static UPDATE_USER_SUCCESS = 'UPDATE_USER_SUCCESS';
+    updateUserSuccess(user): Action {
+        return {
+            type: UserActions.UPDATE_USER_SUCCESS,
+            payload: user
+        };
+    }
 }

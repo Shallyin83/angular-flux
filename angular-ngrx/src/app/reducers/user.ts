@@ -13,6 +13,13 @@ export const user = (state: any = [], action) => {
                 })
             };
         }
+        case 'UPDATE_USERS_SUCCESS': {
+            return {
+                data: state.data.map((user) => {
+                    return user.id === action.payload.user.id ? action.payload.user : user;
+                })
+            };  
+        }
         default: {
             return state;
         }
