@@ -24,8 +24,8 @@ export class UserDetailContainerComponent implements OnInit {
   }
 
   deleteUser(user) {
-    const r = confirm('Are you sure?');
-    if (r) {
+    const confirmDelete = confirm('Are you sure?');
+    if (confirmDelete) {
       this.deleteUserEvent.emit(user);
     }
   }
